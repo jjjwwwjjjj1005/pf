@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+	<title>월간건축문화</title>
+</head>
+
+<body>
+
+	<div id="fullpage">
+		<div class="menu">
+			<ul class="gnb">
+				<li class="nav"><a href="#">Home</a></li>
+				<li class="nav"><a href="#">Architecture </a></li>
+				<li class="nav"><a href="#">Interior Project</a></li>
+				<li class="logo"><a href="#"><img src="img/logo.png" alt=""></a></li>
+				<li class="nav"><a href="#">Edition</a></li>
+				<li class="nav"><a href="#">A&C Magazine</a></li>
+				<li class="nav"><a href="#">MASIL wide</a></li>
+			</ul>
+		</div>
+		<div class="section section-01">
+			<h1 class="text">Architecture <br> Project</h1>
+			<div class="slide" style="background-image:url(img/main_visual_01.jpg);"></div>
+			<div class="slide" style="background-image:url(img/main_visual_05.jpg);"></div>
+			<div class="slide" style="background-image:url(img/main_visual_08.jpg);"></div>
+			<div class="slide" style="background-image:url(img/main_visual2.jpg);"></div>
+			<div class="slide" style="background-image:url(img/img_visual01.png);"></div>
+			<div class="slide" style="background-image:url(img/vis_bg_01.jpg);"></div>
+		</div>
+
+		<div class="section section-02">
+			<h1 class="text">Interior <br> Project</h1>
+			<div class="slide" style="background-image:url(img/in_main05.jpg);"></div>
+			<div class="slide" style="background-image:url(img/in_main03.jpg);"></div>
+			<div class="slide" style="background-image:url(img/in_main01.jpg);"></div>
+			<div class="slide" style="background-image:url(img/in_main04.jpg);"></div>
+			<div class="slide" style="background-image:url(img/in_main06.jpg);"></div>
+				</div>
+
+		<div class="section section-03">
+			<h1 class="text">Edition</h1>
+			<div class="slide" style="background-image:url(img/main_visual1.jpg);"></div>
+		</div>
+		<div class="section section-04">
+			<h1 class="text">About <br>A&C Magazine</h1>
+			<div class="slide" style="background-image:url(img/main_visual_06.jpg);"></div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		$('#fullpage').fullpage({
+			verticalCentered: false,
+			scrollBar: true,
+			keyboardScrolling: true,
+			slidesNavigation: true,
+			slidesNavPosition: 'bottom',
+
+			afterRender: function () {
+        //on page load, start the slideshow
+         slideTimeout = setInterval(function () {
+                $.fn.fullpage.moveSlideRight();
+            }, 3000);
+    }
+		});
+	</script>
+</body>
+
+</html>
