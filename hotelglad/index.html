@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Hotel GLAD</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fab fa-glide"></i> HOTEL GLAD </a>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">HOTELS & RESORTS</a>
+            <a href="#">BOOK NOW</a>
+            <a href="#">OFFERS</a>
+            <a href="#">MEMBERSHIP</a>
+            <a href="#">FACILITIES</a>
+            <a href="#">STORE</a>
+        </div>
+        <span class="menu" style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    </header>
+
+
+
+
+    <section class="myslide-box">
+        <div class="mySlides" style="background-image: url(img/main_1.jpg)"></div>
+        <div class="mySlides" style="background-image: url(img/main_2.jpg)"></div>
+        <div class="mySlides" style="background-image: url(img/main_3.jpg)"></div>
+        <div class="mySlides" style="background-image: url(img/main_4.jpg)"></div>
+
+        <div class="booking">
+            <div>
+                <h1>BOOK NOW</h1>
+                <div class="option">숙박 기간을 <br> 선택해주세요<br><a href="#"><i class="fas fa-arrow-circle-down"></i></a></div>
+                <div class="option">객실을 <br> 선택해주세요<br><a href="#"><i class="fas fa-arrow-circle-down"></i></a></div>
+                <div class="option">인원을 <br> 선택해주세요<br><a href="#"><i class="fas fa-arrow-circle-down"></i></a></div>
+                <div class="option">기타 시설 예약<br> 선택해주세요<br><a href="#"><i class="fas fa-arrow-circle-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stay">
+        <div class="container">
+            <h1 class="text1"></h1>
+            <h5 class="text1"></h5>
+            <div class="img1"></div>
+            <div class="img2"></div>
+        </div>
+    </section>
+    <section class="eat">
+        <div class="container">
+            
+        </div>
+    </section>
+
+    <section class="story">
+        <div class="container"></div>
+
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <a href="#"><i class="far fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+
+
+
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+    </script>
+
+
+</body>
+
+</html>
