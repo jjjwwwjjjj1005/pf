@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>HI-VISION</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">HI <span><i class="fas fa-check-circle"></i></span> vision</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portpolio</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+
+
+
+    <section class="myslide-box">
+       <div class="mySlides" style="background-image: url(img/bg.jpg)"></div>
+       <div class="mySlides" style="background-image: url(img/pic01.jpg)"></div>
+       <div class="mySlides" style="background-image: url(img/slide01.jpg)"></div>
+       <div class="mySlides" style="background-image: url(img/pic04.jpg)"></div>
+    </section>
+
+
+
+
+    <div class="service">
+        <h1>Service</h1>
+        <p>디지털 컨텐츠 제작부터 홍보 마케팅까지 통합 서비스를 제공합니다.</p>
+
+        <div class="contents_box">
+            <div class="contents1">
+                <div class="icon"><img src="img/img4.jpg" alt=""></div>
+                <div class="c_box1">
+                    <p>Web / Mobile</p>
+                    <h2>웹/모바일 사이트개발</h2>
+                    <h3>01</h3>
+                </div>
+            </div>
+            <div class="contents2">
+                <div class="c_box2">
+                    <div class="icon"><img src="img/img3.jpg" alt=""></div>
+                    <p>Application</p>
+                    <h2>어플리케이션 개발</h2>
+                    <h3>02</h3>
+                </div>
+            </div>
+            <div class="contents3">
+                <div class="c_box3">
+                    <div class="icon"><img src="img/img2.jpg" alt=""></div>
+                    <p>Promotion</p>
+                    <h2>홍보/마케팅 컨설팅</h2>
+                    <h3>03</h3>
+                </div>
+            </div>
+            <div class="contents4">
+                <div class="c_box4">
+                    <div class="icon"><img src="img/img1.jpg" alt=""></div>
+                    <p>maintenance / Site Operations</p>
+                    <h2>유지보수/운영대행</h2>
+                    <h3>04</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="contact">
+        <div class="left">
+            <div class="year">SINCE 2020</div>
+            <h1>Contact Us</h1>
+            <p>작은 일이라도 정성을 다하여 답변해드립니다.
+                <br> 10년 이상 성공적 프로젝트 진행 노하우가 당신과 함께 하기를 원합니다.
+            </p>
+
+
+        </div>
+        <div class="right">
+            <h1>ORDER</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <br>
+            <label for="업체명"><b>업체명</b></label>
+            <input type="text" placeholder="업체명" name="업체명" required>
+            <label for="담당자명"><b>담당자명</b></label>
+            <input type="담당자명" placeholder="담당자명" name="담당자명" required><br>
+
+            <label for="연락처"><b>연락처</b></label>
+            <input type="연락처" placeholder="연락처" name="연락처" required>
+
+            <label for="이메일"><b>이  메  일</b></label>
+            <input type="이메일" placeholder="이메일" name="이메일" required>
+            <br>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 웹/모바일 사이트개발
+                </label>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">어플리케이션 개발
+                </label>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">광고,홍보 마케팅
+                </label>
+            <br>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">업무지원 솔루션 개발
+                </label>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">유지보수/운영대행
+                </label>
+
+
+
+            <div class="clearfix">
+                <button type="button" class="btn">상담신청</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <a href="#"><i class="far fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+
+
+</body>
+
+</html>
